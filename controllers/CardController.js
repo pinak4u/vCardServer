@@ -37,8 +37,8 @@ exports.viewCard = async (req,res,next)=>{
 }
 
 exports.deleteCard = async (req,res,next)=>{
-    let id = req.params.id
-    let deletedCard = Card.deleteOne({'_id':id});
+    let id = req.params.id;
+    let deletedCard = await Card.deleteOne({'_id':id});
     return res.send(deletedCard);
 }
 
@@ -47,8 +47,8 @@ exports.getAllCardsForUser = async (req,res,next)=>{
     return res.send(allCards);
 }
 
-exports.searchCard = async (res,req,next) => {
-    console.log(req.params);
-    let card = await Card.findOne({'_id':req.params.id});
+exports.searchCard = async (req,res,next) => {
+    let id = req.params.id;
+    let card = await Card.findOne({'_id':id});
     return res.send(card);
 }
