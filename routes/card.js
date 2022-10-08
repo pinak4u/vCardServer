@@ -7,6 +7,6 @@ router.patch('/edit/:id',CardController.editCard);
 router.get('/view/:id',CardController.viewCard);
 router.delete('/delete/:id',CardController.deleteCard);
 router.get('/getAllCards',CardController.getAllCardsForUser);
-router.get('/searchCard',CardController.searchCard);
+router.get('/searchCard/:id',CardController.searchCard);
 
 module.exports = router;

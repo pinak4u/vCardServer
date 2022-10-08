@@ -17,3 +17,7 @@ exports.getAllCardsForFranchise = (req,res,next)=>{
 exports.searchCard = (res,req,next) => {
     return res.send('searchCard route is hit')
 }
+
+exports.registerFranchise = (res,req,next) => {
+    return res.send('registerFranchise route is hit')
+}

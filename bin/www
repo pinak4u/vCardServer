@@ -33,7 +33,10 @@ server.on('listening', onListening);
 /**
  * Preparing the connection string for Connection to MongoDB
  */
-mongoose.connect("mongodb+srv://pinak:admin123@cluster0.vi72cii.mongodb.net/?retryWrites=true&w=majority",{useUnifiedTopology:true})
+mongoose.connect("mongodb+srv://pinak:admin123@cluster0.vi72cii.mongodb.net/?retryWrites=true&w=majority",{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
     .then(res=>console.log("Connected to DB"))
     .catch(e=>console.error(e));
 /**
